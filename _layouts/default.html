@@ -1,16 +1,42 @@
-<!doctype html>
-<html lang="en">
-{% include head.html %}
-<body>
-  <main>
-    <div class="grid grid-centered">
-      <div class="grid-cell">
-        {% include navigation.html %}
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+
+    {% if page.toc==true %}
+      <aside class="toc">
+        {% include toc.html html=content %}
+      </aside>
+    {% endif %}
+
+    <div id="main" role="main" class="wrapper-content">
+      <div class="container">
         {{ content }}
-        {% include footer.html %}
       </div>
     </div>
-  </main>
-  {% include javascripts.html %}
-</body>
+
+    {% include analytics.html %}
+    
+    {% include open-embed.html %}
+    </body>
+
+  {% if page.toc==true %}
+  <script>
+    document.getElementById("main").classList.add("withtoc");
+  </script>
+  {% endif %}
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      {% include footer.html %}
+    </footer>
+    
 </html>
+
+<!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="Search blog posts..">
+<ul id="results-container"></ul>
+
+<!-- or without installing anything -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>

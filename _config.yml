@@ -1,84 +1,122 @@
-# Mandatory settings
+#
+# 这个文档包含了本博客的设定信息，你可以编辑它来个性化自己的博客，
+#
 
-blog_theme: light # Or use dark
-name: Chalk
-paginate: 25
-url: http://lijiufang.github.io
+# 你的博客名称，请用你想要的博客名替换“LOFFER”，以下修改都可类似处理
+# 注意，“name: LOFFER”，冒号后面的空格不可以省略。
+# 井号后面的文字是说明文档，不会被程序读取。
+name: 壹澗
+# 描述/签名
+description: U may C me, but I'm hallow.
 
+#
+# 下面的设定都是可选的
+#
 
-# Optional settings
+# 你的博客logo图片URL，建议尺寸不超过300px × 300px
+avatar: https://raw.githubusercontent.com/ucancallmestranger/Under-The-Water/master/images/logo.png
 
-about_enabled: true # Change to true if you wish to show an icon in the navigation that redirects to the about page
-discus_identifier: chalk-1 # Add your Disqus identifier
-ga_analytics: UA-28631876-6 # Add your GA Tracking Id
-local_fonts: false # Change to true if you wish to use local fonts
-rss_enabled: true # Change to false if not
-scrollappear_enabled: true # Change to false to disable
-tag_nav_enabled: false # Change to true if you wish to show an additional 'tag-list' navigation below the header
-theme_toggle: false # Change to true if you wish to show an icon in the navigation for dynamic theme toggling
-social:
-  dribbble: nielsenramon # Add your Dribbble handle
-  facebook: # Add your Facebook handle
-  flickr: # Add your Flickr handle
-  github: nielsenramon # Add your GitHub handle
-  linkedin: # Add your LinkedIn handle
-  twitter: nielsenramon # Add your Twitter handle
-  email: # Add your Email address
-  bitcoin: # Add your Bitcoin link or address
-  ethereum: # Add your Ethereum link or address
-  gitlab: # Add your GitLab handle
-  youtube: # Add your Youtube handle
-  twitch: # Add your Twitch handle
-  discord: # Add you Discord server invitation ID
-  tumblr: # Add your Tumblr handle
-  bitbucket: # Add your Bitbucket handle
-  docker: # Add your Docker Hub handle
-  instagram: # Add your Instagram handle
-  keybase: # Add your Keybase handle
-  medium: # Add your Medium handle
-  spotify: # Add your Spotify handle
-  stackoverflow: # Add your Stack Overflow ID number
-  steam: # Add your Steam handle
+# 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
+favicon: https://raw.githubusercontent.com/ucancallmestranger/Under-The-Water/master/images/favicon.png
 
 
-# Important settings (change at own risk)
+# 菜单中的按钮
+navigation:
+  - name: 首页
+    url: /
+  - name: 关于
+    url: /about
+  - name: 归档
+    url: /archive
+  - name: 标签
+    url: /tags
 
-assets:
-  plugins:
-    css: { autoprefixer: {}}
-    img: { optim: {}}
-  source_maps: false
-  sources:
-    - _assets/icons
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/yarn
-collections:
-  my_tags:
-    output: true
-    permalink: /tag/:slug/
-defaults:
-  -
-    scope:
-      path: ""
-      type: my_tags
-    values:
-      layout: articles_by_tag
+# 每页的文章数
+paginate: 8
+
+# 文章简介的区分标记
+excerpt_separator: <!-- more -->
+
+# 你的社交网络链接，它们会作为图标出现在你的网站页脚中，可选填写
+footer-links: 
+  weibo: #请输入你的微博个性域名 https://www.weibo.com/<thispart>
+  behance: # https://www.behance.net/<>
+  dribbble: # https://dribbble.com/<>
+  email: ofilhodaputa@163.com 
+  facebook: #https://www.facebook.com/<>
+  flickr: #https://www.flickr.com/<>
+  github: ucancallmestranger #https://github.com/<>
+  instagram: ucancallmestranger #https://instagram.com/<>
+  linkedin: #https://www.linkedin.com/in/<>
+  pinterest: orianthipan #https://www.pinterest.com/<>
+  rss: For the love of God #随便填点啥RSS就能用了
+  stackoverflow: # http://stackoverflow.com/<>
+  tumblr: orianthi-kilimanjaro # https://<username>.tumblr.com
+  twitter: akiratheshark # https://www.twitter.com/<your_twitter_username> 
+  youtube: # channel/<your_long_string> or user/<user-name>
+
+# 站点页脚的文字
+footer-text: Copyright (c) 2021 壹澗
+
+# 评论，注意，请不要同时添加多种不同的评论区
+
+# 输入Disqus shortname，即可添加评论区
+disqus: loffer #shortname
+
+# 输入Gitalk相关设定，即可添加评论区
+gitalk:
+  clientID: 17433724c7e20c051cc3
+  clientSecret: fd67a83dd2c321c6a00ee7c5c012b1824fc35730
+  repo: comments
+  owner: ucancallmestranger
+
+# 输入Google Analytics web tracking code
+google_analytics:
+
+# 输入你的网站域名（如果你没有添加自己的域名，而是直接用GitHub pages分配的域名的话可以省略）
+url: https://lijiufang.github.io
+
+# 添加你的博客的二级域名，一般来说是你的repository名
+# 如果你的博客的URL是：(http://yourusername.github.io/repository-name)
+# 那么就写成 "/repository-name"
+baseurl: /
+
+
+#
+# !! 以下所有设置都不需要更改 !!
+#
+
+permalink: /:title/
+paginate_path: /page:num/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate
+
+# Exclude these files from your production _site
 exclude:
-  - .travis.yml
-  - bin/*
-  - circle.yml
   - Gemfile
   - Gemfile.lock
-  - package.json
-  - package-lock.json
+  - LICENSE
   - README.md
-  - vendor/
-  - yarn.lock
-plugins:
-  - jekyll-assets
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jemoji
-paginate_path: /posts/page/:num/
-permalink: posts/:slug
+  - CNAME
+

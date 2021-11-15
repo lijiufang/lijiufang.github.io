@@ -5,9 +5,9 @@
 # 你的博客名称，请用你想要的博客名替换“LOFFER”，以下修改都可类似处理
 # 注意，“name: LOFFER”，冒号后面的空格不可以省略。
 # 井号后面的文字是说明文档，不会被程序读取。
-name: 壹澗
+name: 九方
 # 描述/签名
-description: U may C me, but I'm hallow.
+description: 私人空間
 
 #
 # 下面的设定都是可选的
@@ -42,17 +42,17 @@ footer-links:
   weibo: #请输入你的微博个性域名 https://www.weibo.com/<thispart>
   behance: # https://www.behance.net/<>
   dribbble: # https://dribbble.com/<>
-  email: ofilhodaputa@163.com 
+  email: 
   facebook: #https://www.facebook.com/<>
   flickr: #https://www.flickr.com/<>
-  github: ucancallmestranger #https://github.com/<>
-  instagram: ucancallmestranger #https://instagram.com/<>
+  github:  #https://github.com/<>
+  instagram:  #https://instagram.com/<>
   linkedin: #https://www.linkedin.com/in/<>
-  pinterest: orianthipan #https://www.pinterest.com/<>
-  rss: For the love of God #随便填点啥RSS就能用了
+  pinterest:  #https://www.pinterest.com/<>
+  rss: How To Make Love #随便填点啥RSS就能用了
   stackoverflow: # http://stackoverflow.com/<>
-  tumblr: orianthi-kilimanjaro # https://<username>.tumblr.com
-  twitter: akiratheshark # https://www.twitter.com/<your_twitter_username> 
+  tumblr:  # https://<username>.tumblr.com
+  twitter:  # https://www.twitter.com/<your_twitter_username> 
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # 站点页脚的文字

@@ -61,14 +61,14 @@ footer-text: Copyright (c) 2021 壹澗
 # 评论，注意，请不要同时添加多种不同的评论区
 
 # 输入Disqus shortname，即可添加评论区
-disqus: loffer #shortname
+disqus: lijiufang #shortname
 
 # 输入Gitalk相关设定，即可添加评论区
-gitalk:
-  clientID: 17433724c7e20c051cc3
-  clientSecret: fd67a83dd2c321c6a00ee7c5c012b1824fc35730
-  repo: comments
-  owner: ucancallmestranger
+# gitalk:
+  # clientID: 
+  # clientSecret: 
+  # repo: 
+  # owner: 
 
 # 输入Google Analytics web tracking code
 google_analytics:
